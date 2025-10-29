@@ -14,7 +14,7 @@ module.exports = (env, argv) => {
   const devPath = 'http://localhost:8082/'; 
   
   // 2. Production (Vercel): Root-relative path to ensure assets load correctly on the live domain
-  const prodPath = '/'; 
+  const prodPath = '/online-banking-mfe-2/'
 
   const publicPath = isProduction ? prodPath : devPath;
 
