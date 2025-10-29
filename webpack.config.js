@@ -33,11 +33,9 @@ module.exports = (env, argv) => {
     },
     
     output: {
-      // 🟢 FIX: This ensures the files are written to the 'dist' folder for deployment.
+      // FIX: Set a publicPath that is instantly overridden by the MFE's runtime code
+      publicPath: 'auto', // Use 'auto' to ensure Webpack defaults are disabled
       path: path.resolve(__dirname, 'dist'),
-      
-      // 🟢 FIX: This is now dynamic, ensuring MFE chunks load correctly in both environments.
-      publicPath: publicPath,
     },
     
     resolve: {
